@@ -3,16 +3,21 @@ document.addEventListener(
     () => {
 
         const menuToggle =
-            document.getElementById("menuToggle");
+            document.getElementById(
+                "menuToggle"
+            );
 
         const mainNav =
-            document.getElementById("mainNav");
+            document.getElementById(
+                "mainNav"
+            );
 
 
         function refreshIcons() {
 
             if (
-                typeof lucide !== "undefined"
+                typeof lucide !==
+                "undefined"
             ) {
 
                 lucide.createIcons();
@@ -28,7 +33,9 @@ document.addEventListener(
                 !menuToggle ||
                 !mainNav
             ) {
+
                 return;
+
             }
 
 
@@ -49,6 +56,14 @@ document.addEventListener(
                 open
                     ? "true"
                     : "false"
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-label",
+                open
+                    ? "Close navigation"
+                    : "Open navigation"
             );
 
 
@@ -73,6 +88,7 @@ document.addEventListener(
                 event => {
 
                     event.preventDefault();
+
                     event.stopPropagation();
 
 
@@ -90,40 +106,52 @@ document.addEventListener(
             );
 
 
-            mainNav.addEventListener(
-                "click",
-                event => {
+            mainNav
+                .querySelectorAll(
+                    "a"
+                )
+                .forEach(
+                    link => {
 
-                    const link =
-                        event.target.closest(
-                            "a"
+                        link.addEventListener(
+                            "click",
+                            () => {
+
+                                setMenu(
+                                    false
+                                );
+
+                            }
                         );
 
-
-                    if (link) {
-
-                        setMenu(false);
-
                     }
-
-                }
-            );
+                );
 
 
             document.addEventListener(
                 "click",
                 event => {
 
+                    const insideMenu =
+                        mainNav.contains(
+                            event.target
+                        );
+
+
+                    const insideButton =
+                        menuToggle.contains(
+                            event.target
+                        );
+
+
                     if (
-                        !mainNav.contains(
-                            event.target
-                        ) &&
-                        !menuToggle.contains(
-                            event.target
-                        )
+                        !insideMenu &&
+                        !insideButton
                     ) {
 
-                        setMenu(false);
+                        setMenu(
+                            false
+                        );
 
                     }
 
@@ -140,7 +168,9 @@ document.addEventListener(
                         960
                     ) {
 
-                        setMenu(false);
+                        setMenu(
+                            false
+                        );
 
                     }
 
@@ -149,8 +179,6 @@ document.addEventListener(
 
         }
 
-
-        refreshIcons();
 
 
         const propertyForm =
@@ -194,6 +222,7 @@ document.addEventListener(
         }
 
 
+
         const contactForm =
             document.getElementById(
                 "contact-form"
@@ -233,6 +262,9 @@ document.addEventListener(
             );
 
         }
+
+
+        refreshIcons();
 
     }
 );
