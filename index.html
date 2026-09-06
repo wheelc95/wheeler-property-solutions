@@ -2,24 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wheeler Property Solutions | We Buy Houses As-Is</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Wheeler Property Solutions | We Buy Houses As-Is
+    </title>
 
     <meta
         name="description"
-        content="Wheeler Property Solutions helps homeowners in Durham and the Triangle sell houses as-is with no repairs and flexible closing options."
+        content="Wheeler Property Solutions helps homeowners in Durham and the Triangle explore simple options for selling houses as-is with no repairs and flexible closing."
     >
 
-    <link rel="stylesheet" href="css/styles.css">
+    <meta
+        name="theme-color"
+        content="#07182c"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
 </head>
+
 
 <body>
 
 <header class="site-header">
+
     <div class="container nav-container">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="Wheeler Property Solutions Home"
+        >
             <img
                 src="assets/logo.png"
                 alt="Wheeler Property Solutions"
@@ -27,71 +65,712 @@
             >
         </a>
 
+
         <button
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNav"
         >
-            ☰
+            <i data-lucide="menu"></i>
         </button>
 
-        <nav class="main-nav" id="mainNav">
-            <a href="index.html">Home</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#properties">Properties We Help With</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
 
-            <a href="sell-your-property.html" class="nav-cta">
-                Get My Offer
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Home
             </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#properties">
+                Properties We Help With
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a
+                href="sell-your-property.html"
+                class="nav-cta"
+            >
+                Get My Offer
+                <i data-lucide="arrow-right"></i>
+            </a>
+
         </nav>
 
     </div>
+
 </header>
+
 
 
 <main>
 
-<section class="hero">
 
-    <div class="hero-overlay"></div>
+    <!-- HERO -->
 
-    <div class="container hero-content">
+    <section class="hero">
 
-        <div class="hero-copy">
+        <div class="hero-shade"></div>
 
-            <p class="eyebrow">
-                DURHAM & THE TRIANGLE
-            </p>
+        <div class="container hero-content">
 
-            <h1>
-                We Buy Houses
-                <span>As-Is</span>
-            </h1>
+            <div class="hero-copy">
 
-            <p class="hero-subtitle">
-                No repairs. No showings. Flexible closing.
-            </p>
+                <p class="eyebrow">
+                    DURHAM & THE TRIANGLE
+                </p>
 
-            <p class="hero-description">
-                Wheeler Property Solutions helps homeowners explore
-                straightforward options for properties they are ready to sell.
-            </p>
 
-            <div class="hero-actions">
+                <h1>
+                    We Buy Houses
+                    <span>As-Is</span>
+                </h1>
+
+
+                <p class="hero-subtitle">
+                    No repairs. No showings. Flexible closing.
+                </p>
+
+
+                <p class="hero-description">
+                    Wheeler Property Solutions helps homeowners
+                    explore straightforward options for properties
+                    they are ready to sell.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="sell-your-property.html"
+                        class="btn btn-primary"
+                    >
+                        Get My Offer
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+
+                    <a
+                        href="tel:+19193852529"
+                        class="btn btn-secondary"
+                    >
+                        <i data-lucide="phone"></i>
+                        Call Now
+                    </a>
+
+                </div>
+
+
+                <div class="hero-trust">
+
+                    <div>
+                        <i data-lucide="shield-check"></i>
+                        <span>No Obligation</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="home"></i>
+                        <span>Sell As-Is</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="calendar-check"></i>
+                        <span>Flexible Timeline</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BENEFITS -->
+
+    <section class="benefits">
+
+        <div class="container benefit-grid">
+
+            <article>
+
+                <div class="benefit-icon">
+                    <i data-lucide="home"></i>
+                </div>
+
+                <h3>
+                    Sell As-Is
+                </h3>
+
+                <p>
+                    No repairs or renovations required.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <div class="benefit-icon">
+                    <i data-lucide="calendar-days"></i>
+                </div>
+
+                <h3>
+                    Flexible Closing
+                </h3>
+
+                <p>
+                    Choose a timeline that works for you.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <div class="benefit-icon">
+                    <i data-lucide="handshake"></i>
+                </div>
+
+                <h3>
+                    No Obligation
+                </h3>
+
+                <p>
+                    Start with a simple conversation.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <div class="benefit-icon">
+                    <i data-lucide="map-pin"></i>
+                </div>
+
+                <h3>
+                    Local Solutions
+                </h3>
+
+                <p>
+                    Serving Durham and the Triangle.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section
+        class="section"
+        id="how-it-works"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow dark-eyebrow">
+                    SIMPLE. FLEXIBLE. STRAIGHTFORWARD.
+                </p>
+
+
+                <h2>
+                    How It Works
+                </h2>
+
+
+                <p>
+                    Selling a property does not have to be complicated.
+                    We keep the process clear from the first conversation.
+                </p>
+
+            </div>
+
+
+
+            <div class="steps-grid">
+
+
+                <article class="step-card">
+
+                    <div class="step-top">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <div class="step-icon">
+                            <i data-lucide="message-square-text"></i>
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Tell Us About the Property
+                    </h3>
+
+
+                    <p>
+                        Share a few basic details about the home,
+                        its condition and your situation.
+                    </p>
+
+                </article>
+
+
+
+                <article class="step-card">
+
+                    <div class="step-top">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <div class="step-icon">
+                            <i data-lucide="search-check"></i>
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        We Review It
+                    </h3>
+
+
+                    <p>
+                        We evaluate the property and determine
+                        whether it may be a fit.
+                    </p>
+
+                </article>
+
+
+
+                <article class="step-card">
+
+                    <div class="step-top">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <div class="step-icon">
+                            <i data-lucide="handshake"></i>
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Review Your Options
+                    </h3>
+
+
+                    <p>
+                        If the property is a fit, we can discuss
+                        a possible as-is purchase and closing timeline.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+
+            <div class="center-button">
+
+                <a
+                    href="sell-your-property.html"
+                    class="btn btn-dark"
+                >
+                    Tell Us About Your Property
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROPERTIES -->
+
+    <section
+        class="section section-light"
+        id="properties"
+    >
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <p class="eyebrow dark-eyebrow">
+                    DIFFERENT SITUATIONS. REAL SOLUTIONS.
+                </p>
+
+
+                <h2>
+                    Properties We Can Help With
+                </h2>
+
+
+                <p>
+                    Every property and every owner's situation is different.
+                    These are some of the situations we commonly review.
+                </p>
+
+            </div>
+
+
+
+            <div class="property-grid">
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="key-round"></i>
+                    </div>
+
+                    <h3>
+                        Inherited Properties
+                    </h3>
+
+                    <p>
+                        Explore options for a property
+                        you inherited and may not want to keep.
+                    </p>
+
+                </article>
+
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="house"></i>
+                    </div>
+
+                    <h3>
+                        Vacant Homes
+                    </h3>
+
+                    <p>
+                        Solutions for properties that are
+                        sitting empty or becoming difficult to maintain.
+                    </p>
+
+                </article>
+
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="wrench"></i>
+                    </div>
+
+                    <h3>
+                        Needs Repairs
+                    </h3>
+
+                    <p>
+                        Sell without completing repairs,
+                        renovations or major cleanup first.
+                    </p>
+
+                </article>
+
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="building-2"></i>
+                    </div>
+
+                    <h3>
+                        Unwanted Rentals
+                    </h3>
+
+                    <p>
+                        Options for landlords who are
+                        ready to move on from a rental property.
+                    </p>
+
+                </article>
+
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <h3>
+                        Tenant-Occupied
+                    </h3>
+
+                    <p>
+                        We can review properties that
+                        currently have tenants in place.
+                    </p>
+
+                </article>
+
+
+
+                <article class="property-card">
+
+                    <div class="property-icon">
+                        <i data-lucide="move-right"></i>
+                    </div>
+
+                    <h3>
+                        Life Changes
+                    </h3>
+
+                    <p>
+                        Relocation, downsizing, inheritance
+                        or another transition may create new options.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WHY WHEELER -->
+
+    <section class="premium-section">
+
+        <div class="container premium-grid">
+
+            <div class="premium-copy">
+
+                <p class="eyebrow">
+                    WHY WHEELER PROPERTY SOLUTIONS
+                </p>
+
+
+                <h2>
+                    A More Straightforward Way
+                    to Explore Your Options
+                </h2>
+
+
+                <p>
+                    Our focus is simple: provide property owners
+                    with clear communication, flexible options
+                    and a professional experience from start to finish.
+                </p>
+
+
+                <div class="premium-list">
+
+                    <div>
+
+                        <span>
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <h4>
+                                Clear Communication
+                            </h4>
+
+                            <p>
+                                Straightforward conversations without pressure.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <h4>
+                                As-Is Purchases
+                            </h4>
+
+                            <p>
+                                No need to renovate before reaching out.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <h4>
+                                Flexible Timing
+                            </h4>
+
+                            <p>
+                                Discuss a closing schedule that works for you.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="premium-panel">
+
+                <div class="panel-badge">
+                    LOCAL PROPERTY SOLUTIONS
+                </div>
+
+
+                <h3>
+                    Serving Durham &
+                    the Triangle
+                </h3>
+
+
+                <p>
+                    Wheeler Property Solutions works with
+                    property owners throughout Durham and
+                    surrounding Triangle communities.
+                </p>
+
+
+                <div class="location-list">
+
+                    <span>
+                        Durham
+                    </span>
+
+                    <span>
+                        Raleigh
+                    </span>
+
+                    <span>
+                        Cary
+                    </span>
+
+                    <span>
+                        Chapel Hill
+                    </span>
+
+                    <span>
+                        Surrounding Areas
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="contact.html"
+                    class="text-link"
+                >
+                    Contact Wheeler Property Solutions
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+
+        <div class="container cta-content">
+
+            <div>
+
+                <p class="eyebrow">
+                    READY TO GET STARTED?
+                </p>
+
+
+                <h2>
+                    Tell Us About Your Property
+                </h2>
+
+
+                <p>
+                    No pressure. No obligation.
+                    Start with a simple conversation.
+                </p>
+
+            </div>
+
+
+            <div class="cta-actions">
 
                 <a
                     href="sell-your-property.html"
                     class="btn btn-primary"
                 >
                     Get My Offer
+                    <i data-lucide="arrow-right"></i>
                 </a>
+
 
                 <a
                     href="tel:+19193852529"
-                    class="btn btn-secondary"
+                    class="btn btn-outline-light"
                 >
+                    <i data-lucide="phone"></i>
                     Call Now
                 </a>
 
@@ -99,212 +778,21 @@
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-
-<section class="benefits">
-
-    <div class="container benefit-grid">
-
-        <article>
-            <div class="benefit-icon">🏠</div>
-            <h3>Sell As-Is</h3>
-            <p>No repairs or renovations required.</p>
-        </article>
-
-        <article>
-            <div class="benefit-icon">📅</div>
-            <h3>Flexible Closing</h3>
-            <p>Choose a timeline that works for your situation.</p>
-        </article>
-
-        <article>
-            <div class="benefit-icon">🤝</div>
-            <h3>No Obligation</h3>
-            <p>Start with a simple conversation about your options.</p>
-        </article>
-
-        <article>
-            <div class="benefit-icon">📍</div>
-            <h3>Local Solutions</h3>
-            <p>Serving Durham and communities throughout the Triangle.</p>
-        </article>
-
-    </div>
-
-</section>
-
-
-<section class="section" id="how-it-works">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="eyebrow">
-                SIMPLE. FLEXIBLE. STRAIGHTFORWARD.
-            </p>
-
-            <h2>How It Works</h2>
-
-            <p>
-                Selling your property does not have to be complicated.
-            </p>
-
-        </div>
-
-
-        <div class="steps-grid">
-
-            <article class="step-card">
-
-                <div class="step-number">1</div>
-
-                <h3>Tell Us About the Property</h3>
-
-                <p>
-                    Share a few basic details about your home and situation.
-                </p>
-
-            </article>
-
-
-            <article class="step-card">
-
-                <div class="step-number">2</div>
-
-                <h3>We Review It</h3>
-
-                <p>
-                    We review the property, its condition and your goals.
-                </p>
-
-            </article>
-
-
-            <article class="step-card">
-
-                <div class="step-number">3</div>
-
-                <h3>Review Your Options</h3>
-
-                <p>
-                    If the property is a fit, we can discuss a possible
-                    as-is purchase and closing timeline.
-                </p>
-
-            </article>
-
-        </div>
-
-
-        <div class="center-button">
-
-            <a
-                href="sell-your-property.html"
-                class="btn btn-primary"
-            >
-                Tell Us About Your Property
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="section section-light" id="properties">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="eyebrow">
-                DIFFERENT SITUATIONS. REAL SOLUTIONS.
-            </p>
-
-            <h2>Properties We Can Help With</h2>
-
-        </div>
-
-
-        <div class="property-grid">
-
-            <article class="property-card">
-                <div>🔑</div>
-                <h3>Inherited Properties</h3>
-            </article>
-
-            <article class="property-card">
-                <div>🏚️</div>
-                <h3>Vacant Homes</h3>
-            </article>
-
-            <article class="property-card">
-                <div>🔨</div>
-                <h3>Needs Repairs</h3>
-            </article>
-
-            <article class="property-card">
-                <div>🏘️</div>
-                <h3>Unwanted Rentals</h3>
-            </article>
-
-            <article class="property-card">
-                <div>👥</div>
-                <h3>Tenant-Occupied</h3>
-            </article>
-
-            <article class="property-card">
-                <div>📦</div>
-                <h3>Life Changes</h3>
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="cta-section">
-
-    <div class="container cta-content">
-
-        <div>
-            <p class="eyebrow">READY TO GET STARTED?</p>
-
-            <h2>
-                Tell Us About Your Property
-            </h2>
-
-            <p>
-                No pressure. No obligation. Start with a simple conversation.
-            </p>
-        </div>
-
-        <a
-            href="sell-your-property.html"
-            class="btn btn-primary"
-        >
-            Get My Offer
-        </a>
-
-    </div>
-
-</section>
 
 </main>
 
+
+
+<!-- FOOTER -->
 
 <footer class="site-footer">
 
     <div class="container footer-grid">
 
-        <div>
+
+        <div class="footer-brand">
 
             <img
                 src="assets/logo.png"
@@ -312,51 +800,108 @@
                 class="footer-logo"
             >
 
+
             <p>
+                Local property solutions for homeowners
+                throughout Durham and the Triangle.
+            </p>
+
+
+            <p class="footer-tagline">
                 People. Properties. Possibilities.
             </p>
 
         </div>
 
 
-        <div>
-
-            <h4>Quick Links</h4>
-
-            <a href="index.html">Home</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="sell-your-property.html">Sell Your Property</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
 
         <div>
 
-            <h4>Contact</h4>
+            <h4>
+                Quick Links
+            </h4>
 
-            <p>
-                Durham, North Carolina
-            </p>
+            <a href="index.html">
+                Home
+            </a>
 
-            <a href="tel:+19193852529">
-                (919) 385-2529
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#properties">
+                Properties We Help With
+            </a>
+
+            <a href="sell-your-property.html">
+                Sell Your Property
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
             </a>
 
         </div>
 
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+
+            <p class="footer-contact">
+                <i data-lucide="map-pin"></i>
+                Durham, North Carolina
+            </p>
+
+
+            <a
+                href="tel:+19193852529"
+                class="footer-contact"
+            >
+                <i data-lucide="phone"></i>
+                (919) 385-2529
+            </a>
+
+
+            <p class="footer-contact">
+                <i data-lucide="map"></i>
+                Serving the Triangle
+            </p>
+
+        </div>
+
+
     </div>
+
 
 
     <div class="footer-bottom">
 
-        <div class="container">
+        <div class="container footer-bottom-inner">
 
             <p>
                 © 2026 Wheeler Property Solutions.
                 All rights reserved.
             </p>
+
+
+            <div>
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+            </div>
 
         </div>
 
@@ -365,20 +910,39 @@
 </footer>
 
 
+
+<!-- MOBILE ACTION BAR -->
+
 <div class="mobile-action-bar">
 
     <a href="tel:+19193852529">
+
+        <i data-lucide="phone"></i>
+
         Call Now
+
     </a>
 
+
     <a href="sell-your-property.html">
+
         Get My Offer
+
+        <i data-lucide="arrow-right"></i>
+
     </a>
 
 </div>
 
 
+
 <script src="js/script.js"></script>
+
+
+<script>
+    lucide.createIcons();
+</script>
+
 
 </body>
 </html>
