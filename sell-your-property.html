@@ -1,890 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Sell Your Property | Wheeler Property Solutions
-    </title>
-
-    <meta
-        name="description"
-        content="Tell Wheeler Property Solutions about your property in Durham or the Triangle."
-    >
-
-    <meta
-        name="theme-color"
-        content="#07182c"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07182c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <link
-        rel="stylesheet"
-        href="./css/styles.css?v=20"
-    >
-
+    <link rel="stylesheet" href="./css/styles.css?v=21">
+    <title>Sell Your Property | Wheeler Property Solutions</title>
+    <meta name="description" content="Tell Wheeler Property Solutions about your property in Durham or the Triangle.">
 </head>
-
-
 <body>
-
-
 <header class="site-header">
-
     <div class="container nav-container">
-
-        <a
-            href="index.html"
-            class="brand"
-            aria-label="Wheeler Property Solutions Home"
-        >
-
-            <img
-                src="./assets/logo.png"
-                alt="Wheeler Property Solutions"
-                class="logo"
-            >
-
+        <a href="index.html" class="brand" aria-label="Wheeler Property Solutions Home">
+            <img src="./assets/logo.png" alt="Wheeler Property Solutions" class="logo">
         </a>
-
-
-        <button
-            type="button"
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation"
-            aria-expanded="false"
-            aria-controls="mainNav"
-        >
-
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
             <i data-lucide="menu"></i>
-
         </button>
-
-
-        <nav
-            class="main-nav"
-            id="mainNav"
-        >
-
+        <nav class="main-nav" id="mainNav">
             <a href="index.html">Home</a>
-
-            <a href="index.html#how-it-works">
-                How It Works
-            </a>
-
-            <a href="index.html#properties">
-                Properties We Help With
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a
-                href="#property-form"
-                class="nav-cta"
-            >
-                Get My Offer
-                <i data-lucide="arrow-right"></i>
-            </a>
-
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#properties">Properties We Help With</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="sell-your-property.html" class="nav-cta">Get My Offer <i data-lucide="arrow-right"></i></a>
         </nav>
-
     </div>
-
 </header>
-
-
-
 <main>
-
-
-    <section class="form-hero hero-image-section">
-
-        <img
-            src="./assets/hero-house.png"
-            alt=""
-            class="hero-background"
-            aria-hidden="true"
-        >
-
-        <div class="form-hero-shade"></div>
-
-
-        <div class="container form-hero-content">
-
-            <p class="eyebrow">
-                SELL YOUR PROPERTY
-            </p>
-
-            <h1>
-                Tell Us About
-                <span>Your Property</span>
-            </h1>
-
-            <p class="form-hero-subtitle">
-                No repairs. No showings. No pressure.
-            </p>
-
-            <p class="form-hero-description">
-                Share a few details about your property and situation.
-                We’ll review the information and follow up.
-            </p>
-
+<section class="form-hero hero-image-section">
+    <img src="./assets/hero-house-1.png" alt="" class="hero-background" aria-hidden="true">
+    <div class="form-hero-shade"></div>
+    <div class="container form-hero-content"><p class="eyebrow">SELL YOUR PROPERTY</p><h1>Tell Us About <span>Your Property</span></h1><p class="form-hero-subtitle">No repairs. No showings. No pressure.</p><p class="form-hero-description">Share a few details about your property and situation. We’ll review the information and follow up.</p></div>
+</section>
+<section class="lead-form-section"><div class="container lead-form-grid">
+    <div class="lead-form-card">
+        <div class="form-heading"><p class="eyebrow dark-eyebrow">GET STARTED</p><h2>Property Information</h2><p>Fields marked with an asterisk are required.</p></div>
+        <form id="property-form" class="property-form" action="https://formspree.io/f/xppzjppr" method="POST">
+            <input type="hidden" name="_subject" value="New Wheeler Property Solutions Seller Lead">
+            <input type="hidden" name="_next" value="https://wheelerpropertysolutions.com/thank-you.html">
+            <input type="hidden" name="lead_source" value="Wheeler Property Solutions Website Seller Form">
+            <div class="form-row"><div class="form-group"><label for="full-name">Full Name *</label><input type="text" id="full-name" name="full_name" placeholder="Your full name" autocomplete="name" required></div><div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(919) 555-0123" autocomplete="tel" required></div></div>
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"></div>
+            <div class="form-group"><label for="address">Property Address *</label><input type="text" id="address" name="property_address" placeholder="123 Main Street" autocomplete="street-address" required></div>
+            <div class="form-row"><div class="form-group"><label for="city">City *</label><input type="text" id="city" name="city" placeholder="Durham" autocomplete="address-level2" required></div><div class="form-group"><label for="property-type">Property Type</label><select id="property-type" name="property_type"><option value="">Select property type</option><option>Single-Family Home</option><option>Townhome</option><option>Condo</option><option>Duplex / Multifamily</option><option>Mobile Home</option><option>Land</option><option>Other</option></select></div></div>
+            <div class="form-row"><div class="form-group"><label for="condition">Property Condition</label><select id="condition" name="property_condition"><option value="">Select condition</option><option>Excellent</option><option>Good</option><option>Fair</option><option>Needs Some Repairs</option><option>Needs Major Repairs</option><option>Not Sure</option></select></div><div class="form-group"><label for="occupancy">Occupancy Status</label><select id="occupancy" name="occupancy_status"><option value="">Select occupancy</option><option>Owner Occupied</option><option>Tenant Occupied</option><option>Vacant</option><option>Inherited Property</option><option>Other</option></select></div></div>
+            <div class="form-group"><label for="timeline">Desired Timeline</label><select id="timeline" name="desired_timeline"><option value="">Select timeline</option><option>As Soon As Possible</option><option>Within 30 Days</option><option>1–3 Months</option><option>3+ Months</option><option>Just Exploring Options</option></select></div>
+            <div class="form-group"><label for="details">Additional Information</label><textarea id="details" name="additional_information" rows="6" placeholder="Tell us about the property, repairs, timing, your situation, or anything else you think would be helpful."></textarea></div>
+            <div class="form-consent"><input type="checkbox" id="consent" name="contact_consent" value="Yes" required><label for="consent">I agree that Wheeler Property Solutions may contact me about this property inquiry.</label></div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitButton"><span id="submitText">Submit Property Details</span><i data-lucide="arrow-right"></i></button>
+            <div class="form-privacy"><i data-lucide="lock"></i><span>Your information will only be used to respond to your property inquiry.</span></div>
+        </form>
+    </div>
+    <aside class="form-side-panel"><p class="eyebrow">WHY PROPERTY OWNERS CONTACT US</p><h2>A Simple First Step</h2><p class="side-panel-intro">You do not need to prepare the property before reaching out. Start with a conversation and we’ll review the situation.</p>
+        <div class="form-side-features">
+            <div><span><i data-lucide="wrench"></i></span><div><h3>No Repairs Required</h3><p>Tell us about the property in its current condition.</p></div></div>
+            <div><span><i data-lucide="calendar-clock"></i></span><div><h3>Flexible Timing</h3><p>Discuss a timeline that fits your situation.</p></div></div>
+            <div><span><i data-lucide="shield-check"></i></span><div><h3>No Obligation</h3><p>Submitting the form does not require you to sell.</p></div></div>
         </div>
-
-    </section>
-
-
-
-    <section class="lead-form-section">
-
-        <div class="container lead-form-grid">
-
-
-            <div class="lead-form-card">
-
-                <div class="form-heading">
-
-                    <p class="eyebrow dark-eyebrow">
-                        GET STARTED
-                    </p>
-
-                    <h2>
-                        Property Information
-                    </h2>
-
-                    <p>
-                        Fields marked with an asterisk are required.
-                    </p>
-
-                </div>
-
-
-                <form
-                    id="property-form"
-                    class="property-form"
-                    action="https://formspree.io/f/xppzjppr"
-                    method="POST"
-                >
-
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="New Wheeler Property Solutions Seller Lead"
-                    >
-
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="https://wheelerpropertysolutions.com/thank-you.html"
-                    >
-
-                    <input
-                        type="hidden"
-                        name="lead_source"
-                        value="Wheeler Property Solutions Website Seller Form"
-                    >
-
-
-                    <div class="form-row">
-
-
-                        <div class="form-group">
-
-                            <label for="full-name">
-                                Full Name *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="full-name"
-                                name="full_name"
-                                placeholder="Your full name"
-                                autocomplete="name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="phone">
-                                Phone Number *
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="(919) 555-0123"
-                                autocomplete="tel"
-                                required
-                            >
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email Address
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            autocomplete="email"
-                        >
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <label for="address">
-                            Property Address *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="address"
-                            name="property_address"
-                            placeholder="123 Main Street"
-                            autocomplete="street-address"
-                            required
-                        >
-
-                    </div>
-
-
-
-                    <div class="form-row">
-
-
-                        <div class="form-group">
-
-                            <label for="city">
-                                City *
-                            </label>
-
-                            <input
-                                type="text"
-                                id="city"
-                                name="city"
-                                placeholder="Durham"
-                                autocomplete="address-level2"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="property-type">
-                                Property Type
-                            </label>
-
-                            <select
-                                id="property-type"
-                                name="property_type"
-                            >
-
-                                <option value="">
-                                    Select property type
-                                </option>
-
-                                <option value="Single-Family Home">
-                                    Single-Family Home
-                                </option>
-
-                                <option value="Townhome">
-                                    Townhome
-                                </option>
-
-                                <option value="Condo">
-                                    Condo
-                                </option>
-
-                                <option value="Duplex / Multifamily">
-                                    Duplex / Multifamily
-                                </option>
-
-                                <option value="Mobile Home">
-                                    Mobile Home
-                                </option>
-
-                                <option value="Land">
-                                    Land
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="form-row">
-
-
-                        <div class="form-group">
-
-                            <label for="condition">
-                                Property Condition
-                            </label>
-
-                            <select
-                                id="condition"
-                                name="property_condition"
-                            >
-
-                                <option value="">
-                                    Select condition
-                                </option>
-
-                                <option value="Excellent">
-                                    Excellent
-                                </option>
-
-                                <option value="Good">
-                                    Good
-                                </option>
-
-                                <option value="Fair">
-                                    Fair
-                                </option>
-
-                                <option value="Needs Some Repairs">
-                                    Needs Some Repairs
-                                </option>
-
-                                <option value="Needs Major Repairs">
-                                    Needs Major Repairs
-                                </option>
-
-                                <option value="Not Sure">
-                                    Not Sure
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="occupancy">
-                                Occupancy Status
-                            </label>
-
-                            <select
-                                id="occupancy"
-                                name="occupancy_status"
-                            >
-
-                                <option value="">
-                                    Select occupancy
-                                </option>
-
-                                <option value="Owner Occupied">
-                                    Owner Occupied
-                                </option>
-
-                                <option value="Tenant Occupied">
-                                    Tenant Occupied
-                                </option>
-
-                                <option value="Vacant">
-                                    Vacant
-                                </option>
-
-                                <option value="Inherited Property">
-                                    Inherited Property
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <label for="timeline">
-                            Desired Timeline
-                        </label>
-
-                        <select
-                            id="timeline"
-                            name="desired_timeline"
-                        >
-
-                            <option value="">
-                                Select timeline
-                            </option>
-
-                            <option value="As Soon As Possible">
-                                As Soon As Possible
-                            </option>
-
-                            <option value="Within 30 Days">
-                                Within 30 Days
-                            </option>
-
-                            <option value="1–3 Months">
-                                1–3 Months
-                            </option>
-
-                            <option value="3+ Months">
-                                3+ Months
-                            </option>
-
-                            <option value="Just Exploring Options">
-                                Just Exploring Options
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <label for="details">
-                            Additional Information
-                        </label>
-
-                        <textarea
-                            id="details"
-                            name="additional_information"
-                            rows="6"
-                            placeholder="Tell us about the property, repairs, timing, your situation, or anything else you think would be helpful."
-                        ></textarea>
-
-                    </div>
-
-
-
-                    <div class="form-consent">
-
-                        <input
-                            type="checkbox"
-                            id="consent"
-                            name="contact_consent"
-                            value="Yes"
-                            required
-                        >
-
-                        <label for="consent">
-                            I agree that Wheeler Property Solutions may
-                            contact me about this property inquiry.
-                        </label>
-
-                    </div>
-
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary form-submit"
-                        id="submitButton"
-                    >
-
-                        <span id="submitText">
-                            Submit Property Details
-                        </span>
-
-                        <i data-lucide="arrow-right"></i>
-
-                    </button>
-
-
-
-                    <div class="form-privacy">
-
-                        <i data-lucide="lock"></i>
-
-                        <span>
-                            Your information will only be used
-                            to respond to your property inquiry.
-                        </span>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-
-
-            <aside class="form-side-panel">
-
-                <p class="eyebrow">
-                    WHY PROPERTY OWNERS CONTACT US
-                </p>
-
-                <h2>
-                    A Simple First Step
-                </h2>
-
-                <p class="side-panel-intro">
-                    You do not need to prepare the property before reaching out.
-                    Start with a conversation and we’ll review the situation.
-                </p>
-
-
-                <div class="form-side-features">
-
-
-                    <div>
-
-                        <span>
-                            <i data-lucide="wrench"></i>
-                        </span>
-
-                        <div>
-                            <h3>No Repairs Required</h3>
-                            <p>
-                                Tell us about the property in its current condition.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            <i data-lucide="calendar-clock"></i>
-                        </span>
-
-                        <div>
-                            <h3>Flexible Timing</h3>
-                            <p>
-                                Discuss a timeline that fits your situation.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            <i data-lucide="shield-check"></i>
-                        </span>
-
-                        <div>
-                            <h3>No Obligation</h3>
-                            <p>
-                                Submitting the form does not require you to sell.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="side-panel-divider"></div>
-
-
-                <div class="side-contact">
-
-                    <p>
-                        Prefer to contact us directly?
-                    </p>
-
-                    <a
-                        href="tel:+19193852529"
-                        class="side-phone"
-                    >
-                        <i data-lucide="phone"></i>
-                        (919) 385-2529
-                    </a>
-
-                    <a
-                        href="mailto:offers@wheelerpropertysolutions.com"
-                        class="side-phone"
-                    >
-                        <i data-lucide="mail"></i>
-                        offers@wheelerpropertysolutions.com
-                    </a>
-
-                </div>
-
-            </aside>
-
-
-        </div>
-
-    </section>
-
-
-
-    <section class="next-steps-section">
-
-        <div class="container">
-
-            <div class="section-heading centered">
-
-                <p class="eyebrow dark-eyebrow">
-                    WHAT HAPPENS NEXT?
-                </p>
-
-                <h2>
-                    From Inquiry to Next Steps
-                </h2>
-
-                <p>
-                    We keep the process simple and clear.
-                </p>
-
-            </div>
-
-
-            <div class="next-steps-grid">
-
-                <article>
-
-                    <span class="next-number">01</span>
-
-                    <div class="next-icon">
-                        <i data-lucide="file-text"></i>
-                    </div>
-
-                    <h3>Submit the Form</h3>
-
-                    <p>
-                        Share the basic details about your property.
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span class="next-number">02</span>
-
-                    <div class="next-icon">
-                        <i data-lucide="search"></i>
-                    </div>
-
-                    <h3>We Review the Property</h3>
-
-                    <p>
-                        We review the information and research the property.
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span class="next-number">03</span>
-
-                    <div class="next-icon">
-                        <i data-lucide="message-square"></i>
-                    </div>
-
-                    <h3>Discuss Your Options</h3>
-
-                    <p>
-                        We contact you to discuss the property and next steps.
-                    </p>
-
-                </article>
-
-
-                <article>
-
-                    <span class="next-number">04</span>
-
-                    <div class="next-icon">
-                        <i data-lucide="calendar-check"></i>
-                    </div>
-
-                    <h3>Choose What Works</h3>
-
-                    <p>
-                        You decide whether and how you want to move forward.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
+        <div class="side-panel-divider"></div>
+        <div class="side-contact"><p>Prefer to contact us directly?</p><a href="tel:+19193852529" class="side-phone"><i data-lucide="phone"></i> (919) 385-2529</a><a href="mailto:offers@wheelerpropertysolutions.com" class="side-phone"><i data-lucide="mail"></i> offers@wheelerpropertysolutions.com</a></div>
+    </aside>
+</div></section>
+<section class="next-steps-section"><div class="container"><div class="section-heading centered"><p class="eyebrow dark-eyebrow">WHAT HAPPENS NEXT?</p><h2>From Inquiry to Next Steps</h2><p>We keep the process simple and clear.</p></div>
+    <div class="next-steps-grid">
+        <article><span class="next-number">01</span><div class="next-icon"><i data-lucide="file-text"></i></div><h3>Submit the Form</h3><p>Share the basic details about your property.</p></article>
+        <article><span class="next-number">02</span><div class="next-icon"><i data-lucide="search"></i></div><h3>We Review the Property</h3><p>We review the information and research the property.</p></article>
+        <article><span class="next-number">03</span><div class="next-icon"><i data-lucide="message-square"></i></div><h3>Discuss Your Options</h3><p>We contact you to discuss the property and next steps.</p></article>
+        <article><span class="next-number">04</span><div class="next-icon"><i data-lucide="calendar-check"></i></div><h3>Choose What Works</h3><p>You decide whether and how you want to move forward.</p></article>
+    </div>
+</div></section>
 </main>
-
-
-
 <footer class="site-footer">
-
     <div class="container footer-grid">
-
         <div class="footer-brand">
-
-            <img
-                src="./assets/logo.png"
-                alt="Wheeler Property Solutions"
-                class="footer-logo"
-            >
-
-            <p>
-                Local property solutions for homeowners
-                throughout Durham and the Triangle.
-            </p>
-
-            <p class="footer-tagline">
-                People. Properties. Possibilities.
-            </p>
-
+            <img src="./assets/logo.png" alt="Wheeler Property Solutions" class="footer-logo">
+            <p>Local property solutions for homeowners throughout Durham and the Triangle.</p>
+            <p class="footer-tagline">People. Properties. Possibilities.</p>
         </div>
-
-
         <div>
-
             <h4>Quick Links</h4>
-
             <a href="index.html">Home</a>
             <a href="sell-your-property.html">Sell Your Property</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-
         </div>
-
-
         <div>
-
             <h4>Contact</h4>
-
-            <a
-                href="tel:+19193852529"
-                class="footer-contact"
-            >
-                <i data-lucide="phone"></i>
-                (919) 385-2529
-            </a>
-
-            <a
-                href="mailto:offers@wheelerpropertysolutions.com"
-                class="footer-contact"
-            >
-                <i data-lucide="mail"></i>
-                offers@wheelerpropertysolutions.com
-            </a>
-
+            <p class="footer-contact"><i data-lucide="map-pin"></i> Durham, North Carolina</p>
+            <a href="tel:+19193852529" class="footer-contact"><i data-lucide="phone"></i> (919) 385-2529</a>
+            <a href="mailto:offers@wheelerpropertysolutions.com" class="footer-contact"><i data-lucide="mail"></i> offers@wheelerpropertysolutions.com</a>
         </div>
-
     </div>
-
-
     <div class="footer-bottom">
-
         <div class="container footer-bottom-inner">
-
-            <p>
-                © 2026 Wheeler Property Solutions. All rights reserved.
-            </p>
-
-            <div>
-
-                <a href="privacy.html">
-                    Privacy Policy
-                </a>
-
-                <a href="terms.html">
-                    Terms
-                </a>
-
-            </div>
-
+            <p>© 2026 Wheeler Property Solutions. All rights reserved.</p>
+            <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
         </div>
-
     </div>
-
 </footer>
-
-
-
 <div class="mobile-action-bar">
-
-    <a href="tel:+19193852529">
-        <i data-lucide="phone"></i>
-        Call Now
-    </a>
-
-    <a href="#property-form">
-        Get Started
-        <i data-lucide="arrow-right"></i>
-    </a>
-
+    <a href="tel:+19193852529"><i data-lucide="phone"></i> Call Now</a>
+    <a href="sell-your-property.html">Get My Offer <i data-lucide="arrow-right"></i></a>
 </div>
-
-
-
-<script src="./js/script.js?v=20"></script>
-
-
+<script src="./js/script.js?v=21"></script>
 </body>
-
 </html>
