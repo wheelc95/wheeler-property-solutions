@@ -24,7 +24,6 @@
         content="#07182c"
     >
 
-
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -41,13 +40,11 @@
         rel="stylesheet"
     >
 
-
     <script src="https://unpkg.com/lucide@latest"></script>
-
 
     <link
         rel="stylesheet"
-        href="./css/styles.css?v=13"
+        href="./css/styles.css?v=15"
     >
 
 </head>
@@ -135,8 +132,6 @@
 <main>
 
 
-    <!-- CONTACT HERO -->
-
     <section class="contact-hero">
 
         <img
@@ -172,14 +167,10 @@
 
 
 
-    <!-- CONTACT SECTION -->
-
     <section class="contact-section">
 
         <div class="container contact-grid">
 
-
-            <!-- CONTACT INFO -->
 
             <div class="contact-info-panel">
 
@@ -211,14 +202,23 @@
                         </div>
 
                         <div>
-                            <span>CALL US</span>
-                            <strong>(919) 385-2529</strong>
+
+                            <span>
+                                CALL US
+                            </span>
+
+                            <strong>
+                                (919) 385-2529
+                            </strong>
+
                             <p>
                                 Speak directly with Wheeler Property Solutions.
                             </p>
+
                         </div>
 
                     </a>
+
 
 
                     <div class="contact-method-card">
@@ -228,14 +228,23 @@
                         </div>
 
                         <div>
-                            <span>SERVICE AREA</span>
-                            <strong>Durham & the Triangle</strong>
+
+                            <span>
+                                SERVICE AREA
+                            </span>
+
+                            <strong>
+                                Durham & the Triangle
+                            </strong>
+
                             <p>
                                 Serving Durham and surrounding Triangle communities.
                             </p>
+
                         </div>
 
                     </div>
+
 
 
                     <div class="contact-method-card">
@@ -245,17 +254,26 @@
                         </div>
 
                         <div>
-                            <span>RESPONSE</span>
-                            <strong>Property Inquiries Welcome</strong>
+
+                            <span>
+                                RESPONSE
+                            </span>
+
+                            <strong>
+                                Property Inquiries Welcome
+                            </strong>
+
                             <p>
                                 Send a message and we’ll follow up as soon as possible.
                             </p>
+
                         </div>
 
                     </div>
 
 
                 </div>
+
 
 
                 <div class="contact-property-cta">
@@ -283,11 +301,10 @@
 
                 </div>
 
+
             </div>
 
 
-
-            <!-- GENERAL CONTACT FORM -->
 
             <div class="contact-form-card">
 
@@ -309,11 +326,14 @@
                 </div>
 
 
+
                 <form
+                    id="contact-form"
                     class="property-form"
                     action="https://formspree.io/f/xppzjppr"
                     method="POST"
                 >
+
 
                     <input
                         type="hidden"
@@ -321,11 +341,13 @@
                         value="New Wheeler Property Solutions Contact Inquiry"
                     >
 
+
                     <input
                         type="hidden"
                         name="_next"
-                        value="https://wheelc95.github.io/wheeler-property-solutions/thank-you.html"
+                        value="https://wheelerpropertysolutions.com/thank-you.html"
                     >
+
 
                     <input
                         type="hidden"
@@ -334,7 +356,9 @@
                     >
 
 
+
                     <div class="form-row">
+
 
                         <div class="form-group">
 
@@ -370,7 +394,9 @@
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="form-group">
@@ -389,6 +415,7 @@
                         >
 
                     </div>
+
 
 
                     <div class="form-group">
@@ -431,6 +458,7 @@
                     </div>
 
 
+
                     <div class="form-group">
 
                         <label for="contact-message">
@@ -446,6 +474,7 @@
                         ></textarea>
 
                     </div>
+
 
 
                     <div class="form-consent">
@@ -466,13 +495,21 @@
                     </div>
 
 
+
                     <button
                         type="submit"
                         class="btn btn-primary form-submit"
+                        id="contactSubmitButton"
                     >
-                        Send Message
+
+                        <span id="contactSubmitText">
+                            Send Message
+                        </span>
+
                         <i data-lucide="send"></i>
+
                     </button>
+
 
 
                     <div class="form-privacy">
@@ -486,7 +523,9 @@
 
                     </div>
 
+
                 </form>
+
 
             </div>
 
@@ -496,8 +535,6 @@
     </section>
 
 
-
-    <!-- SERVICE AREA -->
 
     <section class="contact-service-section">
 
@@ -519,6 +556,7 @@
                 </p>
 
             </div>
+
 
 
             <div class="contact-location-grid">
@@ -560,8 +598,6 @@
     </section>
 
 
-
-    <!-- CTA -->
 
     <section class="cta-section">
 
@@ -694,6 +730,7 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
         <div class="container footer-bottom-inner">
@@ -704,8 +741,15 @@
             </p>
 
             <div>
-                <a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms</a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
             </div>
 
         </div>
@@ -732,10 +776,46 @@
 
 
 
-<script src="./js/script.js?v=13"></script>
+<script src="./js/script.js?v=15"></script>
+
 
 <script>
+
     lucide.createIcons();
+
+
+    const contactForm =
+        document.getElementById("contact-form");
+
+
+    const contactSubmitButton =
+        document.getElementById("contactSubmitButton");
+
+
+    const contactSubmitText =
+        document.getElementById("contactSubmitText");
+
+
+    if (
+        contactForm &&
+        contactSubmitButton &&
+        contactSubmitText
+    ) {
+
+        contactForm.addEventListener(
+            "submit",
+            () => {
+
+                contactSubmitButton.disabled = true;
+
+                contactSubmitText.textContent =
+                    "Sending...";
+
+            }
+        );
+
+    }
+
 </script>
 
 
