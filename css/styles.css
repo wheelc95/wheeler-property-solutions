@@ -605,7 +605,7 @@ h4 {
     color: var(--white);
 
     background:
-        url("../assets/hero-house.jpg")
+        url("../assets/hero-house.png")
         center center /
         cover
         no-repeat;
@@ -1978,7 +1978,7 @@ h4 {
     color: var(--white);
 
     background:
-        url("../assets/hero-house.jpg")
+        url("../assets/hero-house.png")
         center center /
         cover
         no-repeat;
