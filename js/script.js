@@ -1,185 +1,104 @@
-const menuToggle =
-    document.getElementById("menuToggle");
+document.addEventListener("DOMContentLoaded", () => {
 
-const mainNav =
-    document.getElementById("mainNav");
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
 
 
-function refreshIcons() {
+    function refreshIcons() {
 
-    if (
-        typeof lucide !== "undefined"
-    ) {
-
-        lucide.createIcons();
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
 
     }
 
-}
 
-
-function closeMenu() {
-
-    if (
-        !menuToggle ||
-        !mainNav
-    ) {
+    if (!menuToggle || !mainNav) {
+        refreshIcons();
         return;
     }
 
 
-    mainNav.classList.remove("open");
+    function setMenu(open) {
 
+        mainNav.classList.toggle(
+            "open",
+            open
+        );
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
+        menuToggle.setAttribute(
+            "aria-expanded",
+            open ? "true" : "false"
+        );
 
-
-    menuToggle.innerHTML =
-        '<i data-lucide="menu"></i>';
-
-
-    refreshIcons();
-
-}
-
-
-function openMenu() {
-
-    if (
-        !menuToggle ||
-        !mainNav
-    ) {
-        return;
-    }
-
-
-    mainNav.classList.add("open");
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "true"
-    );
-
-
-    menuToggle.innerHTML =
-        '<i data-lucide="x"></i>';
-
-
-    refreshIcons();
-
-}
-
-
-if (
-    menuToggle &&
-    mainNav
-) {
-
-    menuToggle.addEventListener(
-        "click",
-        () => {
-
-            const isOpen =
-                mainNav.classList.contains("open");
-
-
-            if (isOpen) {
-
-                closeMenu();
-
-            }
-            else {
-
-                openMenu();
-
-            }
-
-        }
-    );
-
-
-    mainNav
-        .querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener(
-                "click",
-                () => {
-
-                    closeMenu();
-
-                }
-            );
-
-        });
-
-}
-
-
-/* CLOSE MENU WHEN CLICKING OUTSIDE */
-
-document.addEventListener(
-    "click",
-    event => {
-
-        if (
-            !mainNav ||
-            !menuToggle
-        ) {
-            return;
-        }
-
-
-        const clickedInsideNav =
-            mainNav.contains(event.target);
-
-
-        const clickedToggle =
-            menuToggle.contains(event.target);
-
-
-        if (
-            !clickedInsideNav &&
-            !clickedToggle
-        ) {
-
-            closeMenu();
-
-        }
-
-    }
-);
-
-
-/* RESET NAV WHEN RETURNING TO DESKTOP */
-
-window.addEventListener(
-    "resize",
-    () => {
-
-        if (
-            window.innerWidth > 960
-        ) {
-
-            closeMenu();
-
-        }
-
-    }
-);
-
-
-/* INITIAL ICON RENDER */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+        menuToggle.innerHTML =
+            open
+                ? '<i data-lucide="x"></i>'
+                : '<i data-lucide="menu"></i>';
 
         refreshIcons();
 
     }
-);
+
+
+    menuToggle.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const isOpen =
+                mainNav.classList.contains("open");
+
+            setMenu(!isOpen);
+
+        }
+    );
+
+
+    mainNav.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            const link =
+                event.target.closest("a");
+
+            if (link) {
+                setMenu(false);
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "click",
+        () => {
+
+            setMenu(false);
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (window.innerWidth > 960) {
+                setMenu(false);
+            }
+
+        }
+    );
+
+
+    refreshIcons();
+
+});
