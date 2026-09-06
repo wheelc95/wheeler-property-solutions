@@ -28,9 +28,7 @@ function closeMenu() {
     }
 
 
-    mainNav
-        .classList
-        .remove("open");
+    mainNav.classList.remove("open");
 
 
     menuToggle.setAttribute(
@@ -58,9 +56,7 @@ function openMenu() {
     }
 
 
-    mainNav
-        .classList
-        .add("open");
+    mainNav.classList.add("open");
 
 
     menuToggle.setAttribute(
@@ -83,16 +79,12 @@ if (
     mainNav
 ) {
 
-
     menuToggle.addEventListener(
         "click",
         () => {
 
-
             const isOpen =
-                mainNav
-                    .classList
-                    .contains("open");
+                mainNav.classList.contains("open");
 
 
             if (isOpen) {
@@ -106,33 +98,26 @@ if (
 
             }
 
-
         }
     );
 
 
-
     mainNav
         .querySelectorAll("a")
-        .forEach(
-            link => {
+        .forEach(link => {
 
+            link.addEventListener(
+                "click",
+                () => {
 
-                link.addEventListener(
-                    "click",
-                    () => {
+                    closeMenu();
 
-                        closeMenu();
+                }
+            );
 
-                    }
-                );
-
-
-            }
-        );
+        });
 
 }
-
 
 
 /* CLOSE MENU WHEN CLICKING OUTSIDE */
@@ -140,7 +125,6 @@ if (
 document.addEventListener(
     "click",
     event => {
-
 
         if (
             !mainNav ||
@@ -151,15 +135,11 @@ document.addEventListener(
 
 
         const clickedInsideNav =
-            mainNav.contains(
-                event.target
-            );
+            mainNav.contains(event.target);
 
 
         const clickedToggle =
-            menuToggle.contains(
-                event.target
-            );
+            menuToggle.contains(event.target);
 
 
         if (
@@ -171,18 +151,15 @@ document.addEventListener(
 
         }
 
-
     }
 );
 
 
-
-/* RESET NAV WHEN RESIZING TO DESKTOP */
+/* RESET NAV WHEN RETURNING TO DESKTOP */
 
 window.addEventListener(
     "resize",
     () => {
-
 
         if (
             window.innerWidth > 960
@@ -192,10 +169,8 @@ window.addEventListener(
 
         }
 
-
     }
 );
-
 
 
 /* INITIAL ICON RENDER */
