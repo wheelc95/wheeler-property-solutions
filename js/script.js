@@ -56,14 +56,11 @@ if (menuToggle && mainNav) {
 }
 
 
-/* Close mobile menu when clicking outside */
+/* CLOSE MOBILE MENU WHEN CLICKING OUTSIDE */
 
 document.addEventListener("click", event => {
 
-    if (
-        !mainNav ||
-        !menuToggle
-    ) {
+    if (!mainNav || !menuToggle) {
         return;
     }
 
@@ -100,7 +97,7 @@ document.addEventListener("click", event => {
 });
 
 
-/* Close menu when resizing back to desktop */
+/* RESET MENU WHEN RETURNING TO DESKTOP */
 
 window.addEventListener("resize", () => {
 
