@@ -1,126 +1,210 @@
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const mainNav =
+    document.getElementById("mainNav");
 
 
-if (menuToggle && mainNav) {
+function refreshIcons() {
 
-    menuToggle.addEventListener("click", () => {
-
-        mainNav.classList.toggle("open");
-
-        const isOpen =
-            mainNav.classList.contains("open");
-
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-
-        menuToggle.innerHTML =
-            isOpen
-                ? '<i data-lucide="x"></i>'
-                : '<i data-lucide="menu"></i>';
-
+    if (
+        typeof lucide !== "undefined"
+    ) {
 
         lucide.createIcons();
 
-    });
-
-
-    mainNav
-        .querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                mainNav.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-
-                menuToggle.innerHTML =
-                    '<i data-lucide="menu"></i>';
-
-
-                lucide.createIcons();
-
-            });
-
-        });
+    }
 
 }
 
 
-/* CLOSE MOBILE MENU WHEN CLICKING OUTSIDE */
+function closeMenu() {
 
-document.addEventListener("click", event => {
-
-    if (!mainNav || !menuToggle) {
+    if (
+        !menuToggle ||
+        !mainNav
+    ) {
         return;
     }
 
 
-    const clickedInsideNav =
-        mainNav.contains(event.target);
+    mainNav
+        .classList
+        .remove("open");
 
 
-    const clickedToggle =
-        menuToggle.contains(event.target);
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
 
 
-    if (
-        !clickedInsideNav &&
-        !clickedToggle
-    ) {
-
-        mainNav.classList.remove("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+    menuToggle.innerHTML =
+        '<i data-lucide="menu"></i>';
 
 
-        menuToggle.innerHTML =
-            '<i data-lucide="menu"></i>';
+    refreshIcons();
+
+}
 
 
-        lucide.createIcons();
-
-    }
-
-});
-
-
-/* RESET MENU WHEN RETURNING TO DESKTOP */
-
-window.addEventListener("resize", () => {
+function openMenu() {
 
     if (
-        window.innerWidth > 960 &&
-        mainNav &&
-        menuToggle
+        !menuToggle ||
+        !mainNav
     ) {
-
-        mainNav.classList.remove("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-
-        menuToggle.innerHTML =
-            '<i data-lucide="menu"></i>';
-
-
-        lucide.createIcons();
-
+        return;
     }
 
-});
+
+    mainNav
+        .classList
+        .add("open");
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+
+    menuToggle.innerHTML =
+        '<i data-lucide="x"></i>';
+
+
+    refreshIcons();
+
+}
+
+
+if (
+    menuToggle &&
+    mainNav
+) {
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+
+            const isOpen =
+                mainNav
+                    .classList
+                    .contains("open");
+
+
+            if (isOpen) {
+
+                closeMenu();
+
+            }
+            else {
+
+                openMenu();
+
+            }
+
+
+        }
+    );
+
+
+
+    mainNav
+        .querySelectorAll("a")
+        .forEach(
+            link => {
+
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeMenu();
+
+                    }
+                );
+
+
+            }
+        );
+
+}
+
+
+
+/* CLOSE MENU WHEN CLICKING OUTSIDE */
+
+document.addEventListener(
+    "click",
+    event => {
+
+
+        if (
+            !mainNav ||
+            !menuToggle
+        ) {
+            return;
+        }
+
+
+        const clickedInsideNav =
+            mainNav.contains(
+                event.target
+            );
+
+
+        const clickedToggle =
+            menuToggle.contains(
+                event.target
+            );
+
+
+        if (
+            !clickedInsideNav &&
+            !clickedToggle
+        ) {
+
+            closeMenu();
+
+        }
+
+
+    }
+);
+
+
+
+/* RESET NAV WHEN RESIZING TO DESKTOP */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+
+        if (
+            window.innerWidth > 960
+        ) {
+
+            closeMenu();
+
+        }
+
+
+    }
+);
+
+
+
+/* INITIAL ICON RENDER */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        refreshIcons();
+
+    }
+);
